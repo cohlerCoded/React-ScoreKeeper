@@ -2,12 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 
 const App = () => {
-  let time = new Date().toLocaleTimeString();
-  let [count, setCount] = useState(time);
-  setInterval(() => {
-    if (time !== new Date().toLocaleTimeString())
-      setCount(new Date().toLocaleTimeString());
-  }, 1000);
+  let [count, setCount] = useState(0);
   return (
     <>
       <container className="scoreContainer">
